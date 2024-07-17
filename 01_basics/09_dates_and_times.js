@@ -20,3 +20,8 @@ console.log(myTimeStamp);
 console.log(myDate.getTime()); //time stamp from created date
 
 console.log(myDate.getDay());
+console.log(myDate.getMonth() + 1);
+
+console.log(myDate.toLocaleDateString('default',{
+    weekday: 'long'
+}));
