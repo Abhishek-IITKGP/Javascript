@@ -1,6 +1,8 @@
 //JS uses automatic memory management where it uses *****garbage collection**** method to allocate and deallocate memory.
 //when the variable or object are in no use they become eligible for garbage collection for reclaiming the memory space.
 
+//Engine of JS lies in browser.
+
 //Primitive datatypes => stored in Stack memory.
 //Non-premitive dattype => Stored in Heap memory.
 
