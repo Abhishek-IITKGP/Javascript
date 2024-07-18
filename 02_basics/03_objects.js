@@ -125,3 +125,22 @@ console.log(Object.entries(constObj));
 
 console.log(constObj.hasOwnProperty('isLoggedIn')); //to check if the object has the specified key return type boolean.
 
+//***********************************DE-STRUCTURING*****************************************//
+const course = {
+    courseName: 'JAVASCRIPT',
+    price: 1000,
+    teacher: 'abhishek'
+}
+
+console.log(course.teacher);
+
+const {teacher} = course;
+console.log(teacher);
+
+const {courseName:name} = course; //here we can define our own variable to call any key of the object and we do not have to write console.log everytime.
+console.log(name); //This is called de-structuring.
+
+//JSON => javascript object nottation.
+
+
+
