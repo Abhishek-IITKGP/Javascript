@@ -41,6 +41,10 @@ console.log(anotherString);
 
 console.log(gameName.slice(-8,4));  //here -8 means 8 index from the left.
 
+//********************DIFFERENCE BETWEEN SUBSTRING AND SLICE********************//
+//slice => parameters: start index & end index (end index is excluded).
+//substring => parameters: start index & length (if length is not provided then whole substr after start index is returned).
+
 //******TRIM******//
 const newStingOne = '   John   '
 console.log(newStingOne);
