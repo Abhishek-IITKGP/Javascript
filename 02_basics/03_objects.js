@@ -140,7 +140,7 @@ console.log(teacher);
 const {courseName:name} = course; //here we can define our own variable to call any key of the object and we do not have to write console.log everytime.
 console.log(name); //This is called de-structuring.
 
-//JSON => javascript object nottation.
+//JSON => javascript object notation.
 
 
 
