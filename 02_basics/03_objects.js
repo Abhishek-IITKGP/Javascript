@@ -155,7 +155,8 @@ console.log(name); //This is called de-structuring.
 //     },
 //     "isActive": null
 //   }
-  
+// Key difference => objects has some name but JSON don't have another thing is that we have to explicitly make key as a string which is not required in JS Object.
+// JS automatically converts object keys into string.
 
 
 
