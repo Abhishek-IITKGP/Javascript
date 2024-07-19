@@ -141,6 +141,21 @@ const {courseName:name} = course; //here we can define our own variable to call 
 console.log(name); //This is called de-structuring.
 
 //JSON => javascript object notation.
+//JSON syntax is based on JavaScript object syntax, but it is a text format that is completely language-independent.
+//JSON is commonly used for transmitting data between a server and web application or API.
+// Example JSON file =>
+//  {
+//     "name": "John Doe",
+//     "age": 30,
+//     "isStudent": false,
+//     "courses": ["Math", "Science"],
+//     "address": {
+//       "city": "New York",
+//       "country": "USA"
+//     },
+//     "isActive": null
+//   }
+  
 
 
 
