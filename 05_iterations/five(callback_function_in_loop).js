@@ -21,3 +21,7 @@ for (let index = 0; index < myNums.length; index++) {
     console.log(myNums[index]);
 }
 
+
+//forEach method do not return anything so for example when it is applied on an array no new array is created on the other hand if we apply filter it make subarray from the exsisting array
+//on which the callback function is applied without modifying the original array and hence felter method resturns somthing unlike the forEach method.
+
