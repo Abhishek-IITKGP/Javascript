@@ -51,7 +51,7 @@ const myObject = {
     swift: 'swift by apple'
 }
 
-//forin loop
+//*****************************************forin loop for objects************************************//
 
 for (const key in myObject) {
     console.log(key); //it gives us all the keys
