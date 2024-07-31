@@ -18,5 +18,62 @@
         </ul>
    </div>
 </body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl');
+    // }
+    //this is not a good approach as it is not good for event propogation
 
+    document.getElementById('river').addEventListener('click', function(e){
+        console.log(e);
+    },false);
+    //this is the best approach as it gives all the feaures.
+    //e => event object, it is a pointer event
+    //event type, timestamp, defaultPrevented(), target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY
+    //important keyboard keys => altKey, ctrlKey, shiftKey, keyCode
+
+    //******************************************Event Propogation************************************************//
+    //Two types => EVENT BUBBLEING & EVENT CAPTURING
+    //Mostly it is event bubbling(false)
+
+    //********EVENT BUBBLING*************
+
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log('imges clicked');
+    })
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log('owl clicked');
+    })
+    //o/p => owl clicked
+    //       image clicked
+    //Here comes the EVENT PROPOGATION. when owl clicked first the owl clicked function will execute and then image click function.
+    //This is known as event propogation.It is by default in bottom-up manner.Inner event executed first and then outer event.
+
+    //************EVENT CAPTURING****************
+    document.getElementById('prayer').addEventListener('click',function(e){
+        console.log('prayer clicked and it is a case of event caputing');
+        e.stopPropagation();
+    });
+    //Here we have used stopPropogation() methon on event object(e) that stops the propogation of inner of event to outer event.
+
+    //preventDefault()
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        console.log('google clicked');
+        e.stopPropagation();
+    })
+    
+
+    //*********************How to remove*****************************
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log((e.target.parentNode)); //this will the parent node in which the e.target which is the complete information within the HTML element is present.
+        let parentNode = e.target.parentNode; //this is the parent node which is the complete <li> element.
+        parentNode.remove();
+
+        //How to remove => select using querySelector => get the parentNode => remove the complete node using .remove() method.
+        
+    });
+
+</script>
 </html>
