@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript (JS)</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setInterval()
+    const sayDate = function(str){
+        console.log(str,Date.now());
+    }
+
+    //******************************************START-STOP****************************************//
+
+    //we can do this way also, put one event listerner within another event listerner like here in stat-stop case.
+    // document.querySelector('#start').addEventListener('click',function(){
+    //     const sayHi = setInterval(sayDate,1000,'hi'); //always put the setInterval within a variable.
+    //     document.querySelector('#stop').addEventListener('click',function(){  //event listerner to stop within the start event listener.
+    //         clearInterval(sayHi);
+    //     })
+    // });
+    //but this is not a good practice because evertime when we click start a new event listener is added to the stop button also which is not what we want.
+
+
+    //Efficient way:
+    let buttonClicker;
+
+    //separate event listener to start the process
+    document.querySelector('#start').addEventListener('click',function(){
+        buttonClicker = setInterval(sayDate,100); //overwrite the buttonClicker.
+    })
+   
+    //separate event listener to stop the process
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(buttonClicker);
+        buttonClicker = null //here we again make the buttonClicker null free its space and it is ready to take another setInterval again.
+    })
+
+</script>
+</html>

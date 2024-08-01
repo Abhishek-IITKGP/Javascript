@@ -33,7 +33,7 @@ console.log(counter);
 
 let x = 3;
 let y = x++;
-console.log('x:'+x,'y:+'y)
+console.log('x:'+x,'y:'+y)
 
 
 let a = 5;

@@ -11,7 +11,7 @@
 </body>
 <script>
     //these are not part of core JS we can only find them inside browser.
-    //setTimeout
+    //setTimeout()
     // setTimeout(function(){
     //     console.log('Abhishek');
     // },2000);
@@ -21,6 +21,18 @@
     }
     setTimeout(sayMyName,2000); //another way of using setTimeout method by using reference of the function.
     
+    //setInterval() : to excute the function repeteadly at some interval of time.
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'JS series';
+    }
+    const changeMe = setTimeout(changeText,2000); //manipulate DOM using setTimeout.
+
+    //clearTimeout()
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log('STOPPED');
+    })
 
     //set
 </script>

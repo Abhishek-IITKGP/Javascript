@@ -10,13 +10,13 @@ console.log(score.toFixed(2)); //put two decimal places.
 console.log(score.toPrecision(2)); //convert the number upto the specified number of precsion digits.
 
 
-//**************MATHS****************//
+//**************MATH****************//
 //Its a library in javascript
 
 console.log(Math);
 console.log(Math.abs(-4)); //absolute
 console.log(Math.round(4.9)); //for rounding off
-console.log(Math.ceil(4.2)); //always roundoff to the upped value.
+console.log(Math.ceil(4.2)); //always roundoff to the upper value.
 console.log(Math.floor(4.2)); //alwasy roundoff to the lower value.
 
 console.log(Math.min(1,2,3,4)); //***min and max method****/
