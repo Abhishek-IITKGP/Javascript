@@ -1,5 +1,6 @@
 //*************************************************FETCH DATA FROM AN API*****************************************//
 
+//**************************using async-await*******************************//
 async function getAllUser() {
     try{
         console.log('inside the getallusers');
@@ -15,9 +16,10 @@ async function getAllUser() {
 getAllUser()
 
 
+//*****************************************using fectch************************************//
 fetch('https://jsonplaceholder.typicode.com/todos/2').then((response) => {   //First then
     return response.json()
-}).then((data) => {      //second then
+}).then((data) => {      //second then. This is called CHAINING.
     console.log(data);
     
 }).catch((error) => {    //catch

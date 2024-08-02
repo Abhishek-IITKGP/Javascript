@@ -66,7 +66,7 @@ const promise5 = new Promise(function(resolve,reject){
         if(!error){
             resolve({username:'ABC',password:'345'})
         }else{
-            reject('ERROR!!!');
+            reject('ERROR!!!');   //error only arise when the browser is unable to request the API otherwise everything we get in the response only.
         }
     },1000)
 })
