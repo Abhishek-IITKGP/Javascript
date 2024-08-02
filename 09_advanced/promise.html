@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROMISES</h1>
+    <button id="api-call">Call API</button>
+    <div id="todos"></div>
+
+    <script>
+        const btn = document.getElementById("api-call")
+        
+        console.log(btn)
+    
+        btn.addEventListener("click", callAPI)
+
+
+    function callAPI(){
+        console.log("BTN CLICKED")
+        let data = {}
+    const apiCall = fetch('https://jsonplaceholder.typicode.com/todos/1')
+    console.log(apiCall)
+    apiCall.then(res => res.json())
+    .then(data => {
+        data = {...data}
+        console.log(Object.keys(data))
+        console.log(data.title)
+        const todosDiv = document.getElementById("todos")
+    const toDoDiv = document.createElement("div")
+        todosDiv.innerText = data.title
+    todosDiv.appendChild(toDoDiv)
+    })
+    .catch(err => console.log(err))
+   
+    }
+    </script>
+</body>
+</html>
