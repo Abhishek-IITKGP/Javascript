@@ -95,8 +95,28 @@ const userInfo = {
     __proto__ : userOne, //making a new object and inheritig other objects using __proto__ method.
     accountInfo,
     residence
-}
+ }
 console.log(userInfo.userOne);
+
+//modern syntax
+Object.setPrototypeOf(userInfo, residence);
+console.log(userInfo.residence);
+console.log(userInfo.accountInfo);
+
+Object.setPrototypeOf(userInfo,userOne);
+console.log(userInfo.userOne);
+
+
+let anotherUsername = 'abhishek        ';
+String.prototype.trueLength = function(){
+    console.log(`${this}`); //this keyword basically referring to the current execution context, for example here it is the original string which is 'abhishek'
+    console.log(`True length is ${this.trim().length}`);
+}
+
+anotherUsername.trueLength();
+'AK'.trueLength()
+
+
 
 
 
