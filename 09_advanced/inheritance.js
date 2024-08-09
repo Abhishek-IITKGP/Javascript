@@ -15,7 +15,7 @@ class user{
 }
 
 //inherited class.
-class teacher extends user{
+class teacher extends user{  //syntax of inheriting parent class by a child class.
     constructor(username, email, password){
         super(username);  //'super' keyword it puts the username in its parent class also.
         this.email = email;
