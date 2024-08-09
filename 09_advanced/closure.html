@@ -10,7 +10,8 @@
     <button id="orange">Orange</button>
 </body>
 <script>
-
+//lexical scoping: means the scope of the outer function is shared with the inner or child function, but opposite is not true.
+//clousure: in the below example even after the execution of clickHandler function change again it is called because of lexical scoping. they share memory.
     function clickHandler(color){
         
         return function changeColor(){
