@@ -13,16 +13,19 @@ async function getAllUser() {
         
     }
 }
-getAllUser()
+// getAllUser()
 
 
 //*****************************************using fectch************************************//
-fetch('https://jsonplaceholder.typicode.com/todos/2').then((response) => {   //First then
+fetch('https://aujasvi.com/todos/2').then((response) => {   //First then
     return response.json()
 }).then((data) => {      //second then. This is called CHAINING.
     console.log(data);
     
 }).catch((error) => {    //catch
+    console.log("IN ERROR")
     console.log(error);
     
+}).finally(() => {
+    console.log("API CALL DONE")
 })
